@@ -1,6 +1,7 @@
 var app = require('koa')();
 var router = require('koa-router')();
 var {getLevels, getCourses, getAllCourses, getCourse} = require('./curriculum');
+var {getCrid} = require('./documents.js');
 
 router.get('/levels', function (ctx, next){
   return getLevels().then((resp) => {
@@ -20,6 +21,11 @@ router.get('/courses', function (ctx, next) {
 
 router.get('/courses/:id', function(ctx, next) {
   return getCourse(this.params.id)
+    .then((resp) => this.json = resp);
+});
+
+router.get('/documents/crid', function(ctx, next) {
+  return getCrid(this.params.username, this.params.password)
     .then((resp) => this.json = resp);
 });
 
