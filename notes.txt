@@ -1,0 +1,49 @@
+After grabbing the pdf, we can use pdftotext to extract text from it
+
+$ pdftotext -layout input.pdf -
+
+-----
+
+Grade horaria
+
+https://siga.ufrj.br/sira/repositorio-curriculo/ListaCursos.html contem um iframe que contem a lista dos cursos e seus curriculos
+
+Para cada curriculo, obter id e ir para:
+https://siga.ufrj.br/sira/repositorio-curriculo/{id}.html
+
+Ex:
+https://siga.ufrj.br/sira/repositorio-curriculo/61AD45DD-92A4-F79B-3D87-7A444052DF9B.html
+
+Essa página contem um iframe, para uma url do tipo
+https://siga.ufrj.br/sira/repositorio-curriculo/distribuicoes/{dist_id}.html
+
+Podemos obter a grade horária dessa distribuição em:
+https://siga.ufrj.br/sira/gradeHoraria/{dist_id}
+
+
+-----
+
+SAP
+
+Primeiro obter cookie em:
+http://www.sap.ufrj.br/
+
+Depois enviar dados de criterios de pesquisa para POST /pesquisarCritR.asp
+
+Em seguida obter resultados com POST /pesquisarR.asp
+
+
+
+------
+
+Bandejão
+
+Tentar sniffar app do bandejão oficial
+
+
+------
+
+Calendário Academico
+
+IDEIA: Text mining de
+http://pr1.ufrj.br/index.php/conselho-de-ensino-de-graduao-mainmenu-148/resolues-ceg-240/2010-2019
