@@ -1,6 +1,7 @@
 var fetch = require('node-fetch');
 var cheerio = require('cheerio');
 
+// Helper for matching all occurrences of a regex
 function matchAll(str, regex){
   var match = str.match(regex);
 
@@ -76,6 +77,7 @@ function getAllCourses(){
 }
 
 function getCourse(id){
+  console.log("GETTING COURSE", id);
   var periodRegex = /(\d+)º Período/
   
   function parsePeriod($, table){
@@ -108,9 +110,8 @@ function getCourse(id){
       })
       .map((table) => parsePeriod($,table))
 
-    // This is pretty much hardcoded for now
     return {
-      title: $("td", tables[0]).eq(1).text(),
+      title: $("title").text(),
       localization: $("td", tables[0]).eq(4).text(),
       code: $("td", tables[0]).eq(6).text(),
       coordinator: $("td", tables[0]).eq(33).text(),

@@ -7,6 +7,7 @@
     "casperjs": "^1.1.0-beta5",
     "denodeify": "^1.2.1",
     "koa": "^1.2.0",
+    "koa-input": "^1.0.5",
     "koa-router": "^5.4.0",
     "node-horseman": "^2.8.2"
   },

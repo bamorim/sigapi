@@ -1,6 +1,5 @@
 var denodeify = require('denodeify');
 var exec = denodeify(require('child_process').exec, function(err, stdout, stderr) {
-
   return [err, stdout];
 });
 
@@ -8,8 +7,9 @@ var cridRegex = /(\d+)\s+([A-Z0-9]+)\s+(([^ ]+ ?)+)\s+(\d+)\s+(\d+\.\d+)\s+(.*)/
 
 function getCrid(username, password){
   // Since siga changed, we can no longer use the old script
+  // In a normal scenario we would use the following code:
   // return exec(`./scripts/get_documents crid ${username} ${password}`)
-  //
+  
   return exec('pdftotext -layout ../crid.pdf -')
 	.then(function(text){
     var lines = text.split("\n")
