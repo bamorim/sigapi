@@ -1,0 +1,32 @@
+\@doanenote {1}
+macro:->NodeJS:
+\url
+{https://nodejs.org/}
+\@endanenote 
+\@doanenote {2}
+macro:->Koa.JS:
+\url
+{http://koajs.com/}
+\@endanenote 
+\@doanenote {3}
+macro:->PhantomJS:
+\url
+{http://phantomjs.org/}
+\@endanenote 
+\@doanenote {4}
+macro:->CasperJS:
+\url
+{http://casperjs.org/}
+\@endanenote 
+\@doanenote {5}
+macro:->pdftotext:
+\url
+{http://linux.die.net/man/1/pdftotext}
+\@endanenote 
+\@doanenote {6}
+macro:->Repositório
+no
+GitHub:
+\url
+{https://github.com/bamorim/sigapi}
+\@endanenote 
